@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [{
+        "src": "./src/main.mjs", 
+        "use": "@now/node"
+    }],
+    "routes": [{
+            "src": "/users(.*)", 
+            "dest": "./src/routes/users.mjs" 
+        },
+        {
+            "src": "/(.*)",
+            "dest": "./src/main.mjs" 
+        }
+    ]
+}
